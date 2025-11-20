@@ -235,6 +235,23 @@ AI-инструменты - это программы, которые помог
 
 Этот вариант проще и не требует ручной настройки окружения.
 
+#### Шаг 0: Установить Docker
+
+Если Docker еще не установлен:
+
+1. **Скачайте Docker Desktop** с официального сайта: https://www.docker.com/products/docker-desktop/
+2. Выберите версию для вашей ОС (Windows, macOS или Linux)
+3. Установите Docker Desktop
+4. Запустите Docker Desktop
+5. Проверьте установку:
+
+```bash
+docker --version
+docker-compose --version
+```
+
+**Важно:** Docker Desktop должен быть запущен перед использованием команд `docker-compose`.
+
 #### Шаг 1: Клонировать репозиторий
 
 ```bash
