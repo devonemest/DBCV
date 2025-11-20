@@ -29,6 +29,7 @@
 - **Официальный сайт**: [dbcv.ru](https://dbcv.ru)
 - **Группа поддержки в Telegram**: [@dbcv_support](https://t.me/dbcv_support)
 - **Презентация проекта**: [Скачать PDF](https://disk.yandex.ru/d/s07pFujXIOHekQ)
+- **Документация GitVerse**: [Wiki DBCV](https://gitverse.ru/carbonfay/DBCV/wiki/WIKIDBCV1-12)
 
 ---
 
@@ -203,6 +204,7 @@ docker-compose -f docker-compose.dev.yml ps
 
 ### Основная документация
 
+- **[Документация GitVerse Wiki](https://gitverse.ru/carbonfay/DBCV/wiki/WIKIDBCV1-12)** — полная документация проекта на GitVerse
 - **[Документация API и функций](DOCUMENTATION.md)** — полное описание API, работы с ботами, шагами, переменными и другими возможностями платформы
 - **[Архитектура системы](architecture.md)** — описание архитектуры платформы, технологий и принципов работы
 
