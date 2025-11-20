@@ -40,14 +40,14 @@ class Settings(BaseSettings):
     ).render_as_string(hide_password=False))
     BASE_DIR: Path = Path(__file__).resolve().parent
 
-    SECRET_KEY: str = secrets.token_urlsafe(32)
-    SECRET_BOX_KEY: SecretStr | None = None
-    SECRET_BOX_KEY_FILE: str | None = None
+    SECRET_KEY: str = os.getenv("SECRET_KEY", secrets.token_urlsafe(32))
+    SECRET_BOX_KEY: SecretStr | None = SecretStr(os.getenv("SECRET_BOX_KEY")) if os.getenv("SECRET_BOX_KEY") else None
+    SECRET_BOX_KEY_FILE: str | None = os.getenv("SECRET_BOX_KEY_FILE")
     SECRET_BOX_KEY_DEFAULT_PATH: str = str(BASE_DIR / "secrets/secret_box_key")
     API_V1_STR: str = "/api/v1"
-    FIRST_SUPERUSER: str = os.getenv("S3_ENDPOINT", "hades")
-    FIRST_SUPERUSER_PASSWORD: str = os.getenv("S3_ENDPOINT", "carbonfay2024")
-    EMAIL_TEST_USER: str = os.getenv("S3_ENDPOINT", "test.user@gmail.com")
+    FIRST_SUPERUSER: str = os.getenv("FIRST_SUPERUSER", "test")
+    FIRST_SUPERUSER_PASSWORD: str = os.getenv("FIRST_SUPERUSER_PASSWORD", "test")
+    EMAIL_TEST_USER: str = os.getenv("EMAIL_TEST_USER", "test.user@gmail.com")
     # 60 minutes * 24 hours * 8 days = 8 days
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8
     # 60 minutes * 24 hours * 30 days = 30 days
